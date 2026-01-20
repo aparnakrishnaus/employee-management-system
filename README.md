@@ -29,6 +29,24 @@ A Django-based Employee Management System implementing:
 - SQLite
 - Bootstrap 5
 
+## Screenshots
+
+### Employee List
+![Employee List](screenshots/employee_list.png)
+
+### Add Employee
+![Add Employee](screenshots/add_employee.png)
+
+### Edit Employee
+![Edit Employee](screenshots/update_employee.png)
+
+### Fetch Employees By ID 
+![Inactive Employees](screenshots/fetch_employee_by_id.png)
+
+### Inactive Employees (Trash)
+![Inactive Employees](screenshots/inactive_list.png)
+
+
 ## How to Run
 
 ```bash
