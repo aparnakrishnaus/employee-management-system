@@ -44,7 +44,7 @@ A Django-based Employee Management System implementing:
 ![Inactive Employees](screenshots/fetch_employee_by_id.png)
 
 ### Inactive Employees (Trash)
-![Inactive Employees](screenshots/inactive_list.png)
+![Inactive Employees](screenshots/inactive_employees.png)
 
 
 ## How to Run
