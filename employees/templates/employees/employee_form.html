@@ -1,0 +1,20 @@
+{% extends 'employees/base.html' %}
+{% block content %}
+
+<div class="employee-form-container">
+<h3 class="mb-2">
+    {% if form.instance.pk %}
+    Edit Employee
+    {% else %}
+    Add Employee
+    {% endif %}
+</h3>
+
+<form method="POST" class="employee-form mb-4"> 
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button class="btn btn-success">Save</button>
+</form>
+</div>
+
+{% endblock %}

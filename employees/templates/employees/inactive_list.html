@@ -1,0 +1,53 @@
+{% extends 'employees/base.html' %}
+
+{% block content %}
+
+<h4 class="mb-3">Inactive Employees</h4>
+
+<div class="card-body p-0" >
+    <div class="table-scroll">
+
+<table class="table table-bordered table-hover mb-0 text-center align-middle table-sm">
+    <thead class="table-dark">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Department</th>
+            <th>Salary</th>
+            <th>Status</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        {% if employees %}
+        {% for employee in employees %}
+        <tr>
+            <td>{{ employee.id }}</td>
+            <td  class="truncate">{{ employee.name }}</td>
+            <td  class="truncate">{{ employee.email }}</td>
+            <td  class="truncate">{{ employee.department }}</td>
+            <td>{{ employee.salary }}</td>
+            <td>
+                <span class="badge bg-secondary">{{ employee.status }}</span>
+            </td>
+            <td>
+                <a href="{% url 'restore_employee' employee.id %}" class="btn btn-success btn-sm mb-1" onclick="return confirm('Are you sure you want to restore this employee?');"><i class="bi bi-arrow-counterclockwise"></i></a>
+                <a href="{% url 'hard_delete_employee' employee.id %}" class="btn btn-danger btn-sm mb-1" onclick="return confirm('permanenetly delete this employee?This action cannot be undone');"><i class="bi bi-trash"></i></a>
+            </td>
+        </tr>
+        {% endfor %}
+        {% else %}
+        <tr>
+            <td colspan="8" class="text-center text-muted">No inactive employees found.</td>
+        </tr>
+        {% endif %}
+    </tbody>
+</table>
+</div>
+</div>
+
+
+
+{% endblock %}

@@ -1,0 +1,130 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #f8f9fa;
+    overflow-x: hidden;
+}
+
+/* nav */
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+.card {
+    margin-top: 30px;
+    overflow-x: hidden;
+}
+
+/* table */
+.table-scroll {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.table {
+    min-width: 900px;
+}
+
+.table-sm td,
+.table-sm th {
+    padding: 0.5rem;
+    font-size: 0.85rem;
+}
+
+.truncate {
+    max-width: 160px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.btn-fixed {
+    width: 70px;
+    font-size: 0.8rem;
+}
+
+h3 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+    font-family: Arial, sans-serif;
+}
+
+/* form */
+.employee-form-container h3 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.employee-form {
+    max-width: 700px;
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+}
+
+.employee-form input,
+.employee-form select,
+.employee-form textarea {
+    width: 100%;
+    padding: 10px 12px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+.employee-form .errorlist {
+    color: red;
+    margin-bottom: 10px;
+    font-size: 13px;
+}
+
+.employee-form button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #28a745;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.employee-form button:hover {
+    background-color: #218838;
+}
+
+@media (max-width: 768px) {
+    .employee-form {
+        padding: 15px;
+    }
+
+    .employee-form input,
+    .employee-form select,
+    .employee-form textarea {
+        padding: 8px 10px;
+        font-size: 13px;
+    }
+
+    .employee-form button {
+        font-size: 15px;
+    }
+}
